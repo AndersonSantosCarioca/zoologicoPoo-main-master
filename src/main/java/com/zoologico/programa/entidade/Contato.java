@@ -1,6 +1,7 @@
 package com.zoologico.programa.entidade;
 
 public class Contato {
+    public static Contato contato;
     private int telefoneFixo;
     private int telefoneCelular;
     private String email;

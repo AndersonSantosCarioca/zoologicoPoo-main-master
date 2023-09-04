@@ -3,20 +3,18 @@ package com.zoologico.programa.entidade;
 public class Pessoa {
     private int id;
     private String nome;
-    private String endereco;
-    private int cep;
+    private Endereco endereco;
     static Contato contato;
-    private String cpf;
+    protected static String cpf;
    
    
 
     //construtor de cliente e funcionário
-    public Pessoa(int id, String nome, String endereco, int cep, String logradouro,Contato contato,String cpf) {
+    public Pessoa(int id, String nome, Endereco endereco,Contato contato,String cpf) {
         this.id = id;      
         this.nome = nome;
-        this.endereco = endereco;
-        this.cep = cep;  
-        Pessoa.contato = contato;  
+        this.endereco = endereco; 
+        Contato.contato = contato;  
         this.cpf = cpf;   
        
     }
@@ -27,8 +25,8 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public Pessoa(int id) {
-        this.id = id;
+    public Pessoa() {
+        
     }
 
     public int getId() {
@@ -47,22 +45,6 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public int getCep() {
-        return cep;
-    }
-
-    public void setCep(int cep) {
-        this.cep = cep;
     }
 
     public String getLogradouro() {

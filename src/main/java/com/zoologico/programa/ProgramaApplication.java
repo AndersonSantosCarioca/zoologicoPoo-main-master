@@ -2,11 +2,15 @@ package com.zoologico.programa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import interfaces.CadFuncionarioAnimal;
+
 import java.util.Scanner;
+
 
 @SpringBootApplication
 public class ProgramaApplication {
-
+/* 
 	public static void main(String[] args) {
 		SpringApplication.run(ProgramaApplication.class, args);
 		Scanner sc = new Scanner(System.in);
@@ -110,4 +114,11 @@ public class ProgramaApplication {
 
 	}
 
+}
+ */
+
+ public static void main(String[] args) {
+	CadFuncionarioAnimal cad = new CadFuncionarioAnimal();
+	cad.escolhadePadrinho();
+ }
 }

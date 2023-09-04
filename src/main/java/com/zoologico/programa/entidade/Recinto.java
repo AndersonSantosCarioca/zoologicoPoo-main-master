@@ -1,14 +1,9 @@
 package com.zoologico.programa.entidade;
 
-public class Recinto {
+public class Recinto extends Setor {
     private int id;
     private String nome;
-
-    public Recinto(int id, String nome) {
-        this.id = id;
-        this.nome = nome;
-    }
-
+    
     public int getId() {
         return id;
     }
@@ -24,4 +19,11 @@ public class Recinto {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public Recinto(int id, String nome, int id2, String nome2) {
+        super(id, nome);
+        id = id2;
+        nome = nome2;
+    }
+
 }

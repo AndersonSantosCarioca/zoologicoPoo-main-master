@@ -1,37 +1,10 @@
 package com.zoologico.programa.entidade;
 
-public class Cliente {
+public class Cliente extends Pessoa{
     private int id;
-    private String nome;
     private float valorPago;
     private int quantIngresso;
-    private Endereco  endereco;
-
-
-
-public Cliente(int id,String nome, float valorPago,int quantIngresso,Endereco endereco){
-    this.id = id;
-    this.nome = nome;
-    this.valorPago = valorPago;
-    this.quantIngresso = quantIngresso;
-    this.endereco = endereco;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+   
 
     public float getValorPago() {
         return valorPago;
@@ -48,16 +21,30 @@ public Cliente(int id,String nome, float valorPago,int quantIngresso,Endereco en
     public void setQuantIngresso(int quantIngresso) {
         this.quantIngresso = quantIngresso;
     }
-    public Cliente(Endereco endereco) {
-        this.endereco = endereco;
+
+    public Cliente(int id, String nome, Endereco endereco, Contato contato, String cpf, int id2, float valorPago,
+            int quantIngresso) {
+        super(id, nome, endereco, contato, cpf);
+        id = id2;
+        this.valorPago = valorPago;
+        this.quantIngresso = quantIngresso;
+    }
+    
+    public Cliente(int id, String nome, int id2, float valorPago, int quantIngresso) {
+        super(id, nome);
+        id = id2;
+        this.valorPago = valorPago;
+        this.quantIngresso = quantIngresso;
+    }
+    
+    public Cliente(int id, float valorPago, int quantIngresso) {
+        this.id = id;
+        this.valorPago = valorPago;
+        this.quantIngresso = quantIngresso;
     }
 
-public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public int getId() {
+        return id;
     }
 
 }
